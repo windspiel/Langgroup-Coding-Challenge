@@ -1,0 +1,17 @@
+User
+
+userID
+frontName
+lastName
+isAdmin
+
+
+Book
+
+Name
+autor
+signedAt
+isBorrowed
+BorrowedAt
+BorrowedFrom
+ReturnerdAt
