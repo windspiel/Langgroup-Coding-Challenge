@@ -1,0 +1,13 @@
+        <ul id="books">
+        @foreach ($data as $book)
+            <li class="book" id="bookID"+{{$book->id}}>
+                <h2 class="bookTitle">How to be succesful</h2>
+                <a class="autor"> John Doe</a>
+                <a class="release"> 12.06.1998</a>
+                <div class= available> 
+                    <img class = "availableImg"><a>available</a> 
+                </div>
+                <button>Borrow</button>
+            </li>
+        @endforeach
+        </ul>

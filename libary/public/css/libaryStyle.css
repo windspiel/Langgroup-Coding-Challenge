@@ -1,0 +1,72 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+}
+
+/*
+Headder
+*/
+#header{
+    background-color: #FF0000;
+    color: #FFFFFF;
+    width:100%;
+}
+#header ul
+{
+    list-style-type: none;
+    text-align: center;
+    padding: 0%;
+}
+#header li
+{
+    display: inline-block;
+    width:19%;
+}
+.nav-link
+{
+    font-weight: bold;
+}
+.selected
+{
+    text-decoration: underline;
+}
+#logo
+{
+    text-align: left;
+}
+/*
+Main
+*/
+.container
+{
+    margin-right: 50px;
+    margin-left: 50px;
+    list-style-type: none;
+}
+.col
+{
+    display: inline-block;
+}
+.bookItem
+{
+    width: 180px;
+    height: 200px;
+    border-color: #908E8E;
+    border-style: solid;
+    border-radius: 15px;
+    margin: 10px;
+    padding:5px; 
+}
+.bookItem button
+{
+
+    font-size: 18px;
+    border-style:solid;
+    border-radius: 5px;
+    margin-top: 15%;
+    width: 100%;
+
+    background-color: #D9D9D9;
+}
+
