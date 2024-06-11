@@ -57,16 +57,31 @@ Main
     border-radius: 15px;
     margin: 10px;
     padding:5px; 
+    display: inline-block;
 }
 .bookItem button
 {
-
+ margin-top: 5%;
+    width: 100%;   
+}
+button
+{
+    padding: 3px;
     font-size: 18px;
     border-style:solid;
     border-radius: 5px;
-    margin-top: 15%;
-    width: 100%;
-
-    background-color: #D9D9D9;
+    background-color: #cfcfcf;
 }
+.bookItem a
+{
+    display: block;
+}
+.notAvailable a
+{
+    display:inline;
+}
+
+
+
+
 

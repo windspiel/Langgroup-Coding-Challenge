@@ -44,10 +44,10 @@
                     <a class="autor"> John Doe</a>
                     <a class="release"> 12.06.1998</a>
                     <div class= notAvailable> 
-                    <img class = "notAvailableImg"> 
+                        <img class = "notAvailableImg"> 
                         <a> not available </a> 
-                        <button> Borrow </button>
                     </div>
+                    <button> Borrow </button>
                 </div>
             </div>
             <div class="col">
