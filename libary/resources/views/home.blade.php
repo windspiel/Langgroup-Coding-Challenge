@@ -38,42 +38,33 @@
     </div>
     <div class="container text-center">
         <div class="row">
+
+            
+            @foreach ($books as $book)
             <div class="col">
-                <div class="bookItem">
-                    <h2 class="bookTitle">How to be succesful</h2>
-                    <a class="autor"> John Doe</a>
-                    <a class="release"> 12.06.1998</a>
-                    <div class= notAvailable> 
-                        <img class = "notAvailableImg"> 
-                        <a> not available </a> 
-                    </div>
+
+                 <div class="col">
+                    <div class="bookItem">
+                        <h2 class="bookTitle">{{$book->name}}</h2>
+                        <a class="autor"> {{$book->autor}}</a>
+                        <a class="release"> {{$book->release}}</a>
+                     @if($book->release)
+                     
+                        <div class= available> 
+                            <img class = "availableImg"> 
+                            <a> available </a>  
+                        </div>
+                     @else
+                        <div class= notAvailable>
+                            <img class = "notAvailableImg"> 
+                            <a> not available </a>  
+                        </div>
+                     @endIf
                     <button> Borrow </button>
-                </div>
-            </div>
-            <div class="col">
-                <div class="bookItem">
-                    <h2 class="bookTitle">How to be succesful</h2>
-                    <a class="autor"> John Doe</a>
-                    <a class="release"> 12.06.1998</a>
-                    <div class= notAvailable> 
-                        <img class = "notAvailableImg"> 
-                        <a> not available </a>
-                    </div>
-                    <button> Borrow </button>
-                </div>
-            </div>
-            <div class="col">
-                <div class="bookItem">
-                    <h2 class="bookTitle">How to be succesful</h2>
-                    <a class="autor"> John Doe</a>
-                    <a class="release"> 12.06.1998</a>
-                    <div class= notAvailable> 
-                    <img class = "notAvailableImg"> 
-                        <a> not available </a> 
-                        <button> Borrow </button>
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
     </div>
 </body>
