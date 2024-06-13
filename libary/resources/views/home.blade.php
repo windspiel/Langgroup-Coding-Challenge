@@ -22,45 +22,45 @@
                 <h1 >LIBARY</h1>
             </li>
             <li>
-                <a class="nav-link selected">BORROW</a>
+                <a class="nav-link selected" href="/">BORROW</a>
             </li>
             <li>
-                <a class="nav-link">RETURN</a>
+                <a class="nav-link notSelected" href="/return">RETURN</a>
             </li>
             <li>
-                <a class="nav-link">ADMIN</a>
+                <a class="nav-link notSelected" href="/admin">ADMIN</a>
             </li>
             <li>
-                <img src="img_girl.jpg" alt="Login" id="userIcon">
+                <img src="icon.jpg" alt="Login" id="userIcon">
             </li>
         </ul>
         
     </div>
     <div class="container text-center">
         <div class="row">
-
-            
             @foreach ($books as $book)
             <div class="col">
-
-                 <div class="col">
-                    <div class="bookItem">
+                <div class="bookItem">
+                    <div class="titleSpace">
                         <h2 class="bookTitle">{{$book->name}}</h2>
-                        <a class="autor"> {{$book->autor}}</a>
-                        <a class="release"> {{$book->release}}</a>
-                     @if($book->release)
-                     
-                        <div class= available> 
-                            <img class = "availableImg"> 
-                            <a> available </a>  
-                        </div>
-                     @else
-                        <div class= notAvailable>
+                    </div>
+                    <div class="infoSpace">
+                        <a class="autor"> {{$book->autor}} {{$book->releaseDate}}</a>
+                        @if($book->isBorrowed)
+                        <div class= "availableItem info">
                             <img class = "notAvailableImg"> 
                             <a> not available </a>  
                         </div>
-                     @endIf
-                    <button> Borrow </button>
+                            
+                        @else
+                        <div class= "availableItem info"> 
+                            <img class = "availableImg"> 
+                            <a> available </a>  
+                        </div>
+                        @endIf
+                    </div>
+                    <div class="buttonSpace">
+                        <button> Borrow </button>
                     </div>
                 </div>
             </div>

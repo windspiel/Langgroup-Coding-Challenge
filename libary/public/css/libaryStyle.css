@@ -9,8 +9,13 @@ Headder
 */
 #header{
     background-color: #FF0000;
-    color: #FFFFFF;
     width:100%;
+    color: #FFFFFF;
+}
+.notSelected
+{
+    color: #FFFFFF;
+    text-decoration: none;
 }
 #header ul
 {
@@ -29,6 +34,7 @@ Headder
 }
 .selected
 {
+    color: #FFFFFF;
     text-decoration: underline;
 }
 #logo
@@ -50,8 +56,8 @@ Main
 }
 .bookItem
 {
-    width: 180px;
-    height: 200px;
+    width: 200px;
+    height: 220px;
     border-color: #908E8E;
     border-style: solid;
     border-radius: 15px;
@@ -61,8 +67,43 @@ Main
 }
 .bookItem button
 {
- margin-top: 5%;
     width: 100%;   
+}
+.bookTitle
+{
+    font-size: large;
+    margin: 0px;
+}
+.titleSpace
+{
+    padding-top: 3px; 
+    height: 30%;
+}
+
+.infoSpace
+{
+    height:35%;
+    padding-top: 3px; 
+}
+
+.buttonSpace
+{
+    padding-top: 3px; 
+    height: 35%;
+}
+.addButtonSpace
+{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    
+} 
+.addButtonSpace button
+{
+    height: 100%;
+    width: 100%;
+    font-size: 50px;
+    
 }
 button
 {
@@ -76,10 +117,12 @@ button
 {
     display: block;
 }
-.notAvailable a
+
+.info a
 {
     display:inline;
 }
+
 
 
 

@@ -11,15 +11,52 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
         <!-- Styles -->
-        <style>
-        </style>
+        <link href="css/libaryStyle.css" rel="stylesheet" />
     </head>
 <body>
     <div id="header">
-        <h1>return</h1>
-
+        
+        
+        <ul>
+            <li id="logo">
+                <h1 >LIBARY</h1>
+            </li>
+            <li>
+                <a class="nav-link notSelected" href="/">BORROW</a>
+            </li>
+            <li>
+                <a class="nav-link selected" href="/return">RETURN</a>
+            </li>
+            <li>
+                <a class="nav-link notSelected" href="/admin">ADMIN</a>
+            </li>
+            <li>
+                <img src="icon.jpg" alt="Login" id="userIcon">
+            </li>
+        </ul>
+        
     </div>
- <div id="bookshelve">
-
- </div>
+    <div class="container text-center">
+        <div class="row">
+            @foreach ($books as $book)
+            <div class="col">
+                <div class="bookItem">
+                    <div class="titleSpace">
+                        <h2 class="bookTitle">{{$book->name}}</h2>
+                    </div>
+                    <div class="infoSpace">
+                        <a class="autor"> {{$book->autor}} {{$book->releaseDate}}</a>
+                        <div class="borrowedAt info" >
+                            <img class = "borrowedAtImg" alt=">>"> 
+                            <a>{{$book->borrowedAt}} </a>  
+                        </div>
+                    </div>
+                    <div class="buttonSpace">
+                        <button> Return Book </button>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
 </body>
