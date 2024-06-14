@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>borrow</title>
+        <title>admin</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -12,13 +12,15 @@
 
         <!-- Styles -->
         <link href="css/libaryStyle.css" rel="stylesheet" />
+         <!--Script-->
+         <script src="js/libary.js"></script> 
     </head>
 <body>
     <div id="header">
         
         
         <ul>
-            <li id="logo">
+            <li id="logo" onclick="navHome()">
                 <h1 >LIBARY</h1>
             </li>
             <li>
@@ -45,7 +47,7 @@
             </div>
 
             <div class="addButtonSpace">
-                <button> + </button>
+                <button onclick="openAddNewBook()"> + </button>
             </div>
         </div>
         <div class="row">
@@ -88,12 +90,28 @@
                         @endIf
                     </div>
                     <div class="buttonSpace">
-                        <button> edit </button>
-                        <button> delete </button>
+                        <button onclick="openEditBook({{$book->id}})"> edit </button>
+                        
+                        <button onclick="deleteBook({{$book->id}})"> delete </button>
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
+    </div>
+    <div class="popUp active">
+        <div class="popUpHeader">
+            <a class="popUpTitle" id="popUpTitle"><h2>Unsigned</h2> </a>
+        </div>
+  
+        
+        <div class ="popUpBody" >
+            <div> <div class="label"><label>titel</label></div> </div><input type="text"> </div>
+            <div> <div class="label"><label>autor</label></div> <input type="text"> </div>
+            <div> <div class="label"><label>release</label></div> <input type="date"> </div>
+            <div class="popUpButton"><button>submit</button> <button>cancel</button> </div>
+        </div>
+        <div id="overlay" ></div>
+        
     </div>
 </body>

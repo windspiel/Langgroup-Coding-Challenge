@@ -12,13 +12,15 @@
 
         <!-- Styles -->
         <link href="css/libaryStyle.css" rel="stylesheet" />
+         <!--Script-->
+         <script src="js/libary.js"></script> 
     </head>
 <body>
     <div id="header">
         
         
         <ul>
-            <li id="logo">
+            <li id="logo" onclick="navHome()">
                 <h1 >LIBARY</h1>
             </li>
             <li>
@@ -52,7 +54,7 @@
                         </div>
                     </div>
                     <div class="buttonSpace">
-                        <button> Return Book </button>
+                        <button onclick="returnBook({{$book->id}})"> Return Book </button>
                     </div>
                 </div>
             </div>

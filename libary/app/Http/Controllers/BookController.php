@@ -13,6 +13,7 @@ class BookController extends Controller
     {
         $books = Book::all();
         return view('home', compact('books') );
+                //OrderdBy isAvaiable and title
 
         //return view('home');
     }
@@ -20,11 +21,13 @@ class BookController extends Controller
     {
         $books = Book::all();
         return view('admin', compact('books') );
+        //OrderdBy title
     }
     public function returnBook()
     {
         $books = Book::all();
         return view('return', compact('books'));
+        //borrowedBy == UserID
     }
 
     

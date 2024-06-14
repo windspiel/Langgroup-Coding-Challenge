@@ -12,13 +12,15 @@
 
         <!-- Styles -->
         <link href="css/libaryStyle.css" rel="stylesheet" />
+        <!--Script-->
+        <script src="js/libary.js"></script> 
     </head>
 <body>
     <div id="header">
         
         
         <ul>
-            <li id="logo">
+            <li id="logo" onclick="navHome()">
                 <h1 >LIBARY</h1>
             </li>
             <li>
@@ -60,7 +62,7 @@
                         @endIf
                     </div>
                     <div class="buttonSpace">
-                        <button> Borrow </button>
+                        <button onclick="borrowBook({{$book->id}})"> Borrow </button>
                     </div>
                 </div>
             </div>
