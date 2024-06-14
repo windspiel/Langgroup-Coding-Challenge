@@ -6,6 +6,7 @@ use App\Models\Lib_user;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use App\Models\Book;
+use Carbon\Carbon;
 
 class BookController extends Controller
 {
@@ -33,15 +34,31 @@ class BookController extends Controller
 
 
     public function storeNewBook(){
+        //dd($_REQUEST);
         $book = new Book;
         $book->name = request('name');
         $book->autor = request('autor');
         $book->releaseDate = request('releaseDate');
-        $book->borrowedBy = request('borrowedBy');
-        $book->borrowedAt = request('borrowedAt');
-        $book->borrowedAt = request('returnedAt');
-        $book->isBorrowed = request('isBorrowed');
+        $book->borrowedFrom = 5;
+        $book->isBorrowed = 0;
+        $book->borrowedAt = Carbon::parse("2024-01-01")->format("Y-m-d");
+        $book->returnedAt = Carbon::parse("2024-01-01")->format("Y-m-d");
         $book->save();
+
+    }
+    public function borrowBook(){
+        //dd($_REQUEST);
+
+        $bookId = request('bookId');
+        $userId = request('userId');
+
+        $books = Book::where('id',$bookId)->get();
+        $book= Book::find($bookId);
+
+        $book->borrowedFrom = $userId;
+        $book->borrowedAt = Carbon::now()->format("Y-m-d");
+
+        $book->update();
     }
 
 }

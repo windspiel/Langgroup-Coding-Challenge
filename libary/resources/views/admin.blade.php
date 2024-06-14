@@ -99,19 +99,41 @@
             @endforeach
         </div>
     </div>
-    <div id="popUp" class="popUp" >
-        <div class="popUpHeader">
-            <a class="popUpTitle" id="popUpTitle"><h2>Unsigned</h2> </a>
+    <form action="/storeNewBook" method="POST">
+        <div id="popUp" class="popUp" >
+            {{ csrf_field() }}
+            <div class="popUpHeader">
+
+                <a class="popUpTitle" id="popUpTitle"><h2>Unsigned</h2> </a>
+            </div>
+            <div class ="popUpBody" >
+                <div> 
+                    <div class="label">
+                        <label>titel</label>
+                    </div> 
+                </div>
+                <input type="text" name="name"/> 
+            </div>
+            <div> 
+                <div class="label" >
+                    <label>autor</label>
+                </div> 
+                <input type="text" name="autor"/> 
+            </div>
+            <div> 
+                <div class="label">
+                    <label>release</label>
+                </div> 
+                <input type="date" name="releaseDate"/> 
+            </div>
+            <div class="popUpButton">
+                <button  type="submit">submit</button> 
+                <button onclick="closePopUp()" >cancel</button> 
+            </div>
         </div>
-  
-        
-        <div class ="popUpBody" >
-            <div> <div class="label"><label>titel</label></div> </div><input type="text"> </div>
-            <div> <div class="label"><label>autor</label></div> <input type="text"> </div>
-            <div> <div class="label"><label>release</label></div> <input type="date"> </div>
-            <div class="popUpButton"><button onclick="closePopUp()">submit</button> <button onclick="closePopUp()">cancel</button> </div>
+        <div id="overlay" class="overlay">
         </div>
-        <div id="overlay" class="overlay"></div>
+    </form> 
         
     </div>
 </body>

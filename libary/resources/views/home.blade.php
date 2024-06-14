@@ -42,6 +42,8 @@
         <div class="row">
             @foreach ($books as $book)
             <div class="col">
+                <form action="/borrowBook" method="POST">
+                    {{ csrf_field() }}
                 <div class="bookItem">
                     <div class="titleSpace">
                         <h2 class="bookTitle">{{$book->name}}</h2>
@@ -61,10 +63,14 @@
                         </div>
                         @endIf
                     </div>
+
                     <div class="buttonSpace">
-                        <button onclick="borrowBook({{$book->id}})"> Borrow </button>
+                        <input name="userId" value="5"></input>
+                        <input name="bookId" value={{$book->id}}></input>
+                        <button type="submit" > Borrow </button>
                     </div>
                 </div>
+                </form>
             </div>
             @endforeach
         </div>
