@@ -42,11 +42,17 @@ function deleteBook(bookId)
     alert(bookId);
 }
 
-function popUp(popUpType) {
-    let text;
-    
-
-  }
+function openPopUp()
+{
+  
+    document.getElementById('popUp').classList.add('active');
+    document.getElementById('overlay').classList.add('active');
+}
+function closePopUp()
+{
+    document.getElementById('popUp').classList.remove('active');
+    document.getElementById('overlay').classList.remove('active');
+}
 
 
 

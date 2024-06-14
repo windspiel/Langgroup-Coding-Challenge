@@ -123,7 +123,7 @@ button
     display:inline;
 }
 
-.popUp
+#popUp
 {
     position: fixed;
     top: 50%;
@@ -134,11 +134,12 @@ button
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 10px;
     z-index: 10;
+    padding: 10px;
+   
 
 }
-.active
+#popUp.active
 {
     transform: translate(-50%, -50% )scale(1);
 }
@@ -170,7 +171,7 @@ button
     background-color: rgba(0, 0, 0, .5);
     pointer-events:none;
 }
-#overlay .active
+#overlay.active
 {
     opacity:1;
     pointer-events:all;

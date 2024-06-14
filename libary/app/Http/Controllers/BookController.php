@@ -9,23 +9,22 @@ use App\Models\Book;
 
 class BookController extends Controller
 {
-    public function index()
+    public function homeView()
     {
         $books = Book::all();
         return view('home', compact('books') );
-                //OrderdBy isAvaiable and title
-
+        
         //return view('home');
     }
-    public function admin()
+    public function adminView()
     {
         $books = Book::all();
         return view('admin', compact('books') );
         //OrderdBy title
     }
-    public function returnBook()
+    public function returnBookView()
     {
-        $books = Book::all();
+        $books = Book::where('isBorrowed',1)->get();
         return view('return', compact('books'));
         //borrowedBy == UserID
     }

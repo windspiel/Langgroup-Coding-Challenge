@@ -47,7 +47,7 @@
             </div>
 
             <div class="addButtonSpace">
-                <button onclick="openAddNewBook()"> + </button>
+                <button onclick="openPopUp()"> + </button>
             </div>
         </div>
         <div class="row">
@@ -99,7 +99,7 @@
             @endforeach
         </div>
     </div>
-    <div class="popUp active">
+    <div id="popUp" class="popUp" >
         <div class="popUpHeader">
             <a class="popUpTitle" id="popUpTitle"><h2>Unsigned</h2> </a>
         </div>
@@ -109,9 +109,9 @@
             <div> <div class="label"><label>titel</label></div> </div><input type="text"> </div>
             <div> <div class="label"><label>autor</label></div> <input type="text"> </div>
             <div> <div class="label"><label>release</label></div> <input type="date"> </div>
-            <div class="popUpButton"><button>submit</button> <button>cancel</button> </div>
+            <div class="popUpButton"><button onclick="closePopUp()">submit</button> <button onclick="closePopUp()">cancel</button> </div>
         </div>
-        <div id="overlay" ></div>
+        <div id="overlay" class="overlay"></div>
         
     </div>
 </body>
